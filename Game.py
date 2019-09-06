@@ -99,6 +99,18 @@ while True:
     ball.sety(ball.ycor() + ball.dy)
 
     #Border checking
+    if paddle_A.ycor() > 240:
+        paddle_A.sety(240)
+
+    if paddle_A.ycor() < -240:
+        paddle_A.sety(-240)
+
+    if paddle_B.ycor() > 240:
+        paddle_B.sety(240)       
+
+    if paddle_B.ycor() < -240:
+        paddle_B.sety(-240)        
+         
     if ball.ycor() > 290:
         ball.sety(290)
         ball.dy *= -1
